@@ -38,5 +38,6 @@ const logNumber: (i: number) => void = (i: number) => {
 // case 1;) Function that returns the 'any' type
 // examples like below
 const json = '{"x": 10, "y": 20}';
-const coordinates = JSON.parse(json);
+// how to fix type any
+const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
