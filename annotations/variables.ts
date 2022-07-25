@@ -41,3 +41,14 @@ const json = '{"x": 10, "y": 20}';
 // how to fix type any
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
+
+// Delayed initialization
+
+let words = ["red", "green", "blue"];
+let foundgreen: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === "green") {
+    foundgreen = true;
+  }
+}
