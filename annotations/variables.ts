@@ -33,7 +33,7 @@ const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
 
-// when to use annotations
+// when to use annotations +++++
 
 // case 1;) Function that returns the 'any' type
 // examples like below
@@ -42,7 +42,7 @@ const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
 
-// Delayed initialization
+//case 2;) Delayed initialization
 
 let words = ["red", "green", "blue"];
 let foundgreen: boolean;
@@ -50,5 +50,16 @@ let foundgreen: boolean;
 for (let i = 0; i < words.length; i++) {
   if (words[i] === "green") {
     foundgreen = true;
+  }
+}
+
+//case 3;) Variables whose type cannot be inferred correctly
+
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
   }
 }
