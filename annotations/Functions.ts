@@ -15,3 +15,18 @@ const throwError = (message: string): void => {
     throw new Error(message);
   }
 };
+
+const todaysWeather = {
+  date: new Date(),
+  weather: "sunny",
+};
+
+const logWeather = ({
+  date,
+  weather,
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  console.log(date, weather);
+};
